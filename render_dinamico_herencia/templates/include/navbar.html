@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark nav-gradient sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="{% url 'aplicacion1:inicio' %}">Render</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMain"
+      aria-controls="navMain"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aplicacion1:inicio' %}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aplicacion1:publicaciones' %}">Publicaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aplicacion1:ir_publicaciones' %}">Redirigir</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aplicacion1:forzar_404' %}">Forzar 404</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

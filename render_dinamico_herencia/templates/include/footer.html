@@ -1,0 +1,22 @@
+{% load static %}
+
+<footer class="footer mt-5">
+  <div class="container py-4">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-md-7">
+        <div class="d-flex align-items-center gap-3">
+          <img class="footer-logo" src="{% static 'img/logo.png' %}" alt="Logo" />
+          <div>
+            <div class="fw-semibold">Render dinámico + herencia</div>
+            <div class="text-muted small">Templates, includes, filtros y control.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-5 text-md-end">
+        <div class="text-muted small">© {% now "Y" %} · Django</div>
+        <div class="text-muted small">Static: <code>/static/</code></div>
+      </div>
+    </div>
+  </div>
+</footer>

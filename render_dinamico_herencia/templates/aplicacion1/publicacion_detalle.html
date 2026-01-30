@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pub.titulo }}{% endblock %}
+{% block h1 %}{{ pub.titulo }}{% endblock %}
+
+{% block subtitle %}
+  Publicado el {{ pub.creado_en|date:"d/m/Y" }} · Estado:
+  {% if pub.publicado %}
+    <span class="badge text-bg-success">Visible</span>
+  {% else %}
+    <span class="badge text-bg-secondary">Oculto</span>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="card shadow-soft">
+    <div class="card-body">
+      <p class="text-muted mb-2">{{ pub.resumen }}</p>
+      <div class="content-box">
+        {{ pub.contenido|linebreaks }}
+      </div>
+
+      <hr />
+
+      <div class="d-flex gap-2 flex-wrap">
+        <a class="btn btn-outline-secondary btn-sm" href="{% url 'aplicacion1:publicaciones' %}">Volver</a>
+        <a class="btn btn-sm btn-primary" href="{% url 'aplicacion1:ir_publicaciones' %}">Ir por redirect()</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
