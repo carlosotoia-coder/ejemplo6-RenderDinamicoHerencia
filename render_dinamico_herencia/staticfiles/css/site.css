@@ -1,0 +1,110 @@
+:root {
+  --bg: #0b1220;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.62);
+  --accent: #7c3aed;
+  --accent2: #06b6d4;
+}
+
+.bg-surface {
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(124, 58, 237, 0.25), transparent),
+              radial-gradient(1000px 600px at 80% 10%, rgba(6, 182, 212, 0.18), transparent),
+              var(--bg);
+  color: var(--text);
+}
+
+.nav-gradient {
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.75), rgba(6, 182, 212, 0.55));
+  backdrop-filter: blur(8px);
+}
+
+.hero-header {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 400px at 30% 30%, rgba(255, 255, 255, 0.10), transparent);
+  pointer-events: none;
+}
+
+.badge-soft {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.hero-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.35);
+}
+
+.hero-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.hero-card-body {
+  padding: 12px 14px;
+}
+
+.shadow-soft {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+}
+
+.card,
+.alert {
+  border-radius: 18px !important;
+}
+
+.card.shadow-soft,
+.shadow-soft .card-body {
+  background: transparent;
+}
+
+.text-muted {
+  color: var(--muted) !important;
+}
+
+.content-box {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+code {
+  color: #e9d5ff;
+}
